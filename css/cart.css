@@ -1,0 +1,279 @@
+/* ============================================
+   PARIZ DENIM - ESTILOS DEL CARRITO
+   Botón eliminar mejorado
+   ============================================ */
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 420px;
+    height: 100vh;
+    background: var(--white);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.08);
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+/* Cabecera */
+.cart-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cart-header h3 i {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: all 0.2s;
+}
+
+.close-cart:hover {
+    color: var(--text-primary);
+    transform: rotate(90deg);
+}
+
+/* Items */
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-light);
+}
+
+.empty-cart i {
+    font-size: 55px;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+.empty-cart p {
+    font-size: 14px;
+}
+
+/* Item */
+.cart-item {
+    display: flex;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.cart-item:hover {
+    background: #faf8f5;
+    margin: 0 -8px;
+    padding: 16px 8px;
+    border-radius: 12px;
+}
+
+/* Imagen */
+.cart-item-img {
+    width: 75px;
+    height: 75px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cart-item-img i {
+    font-size: 32px;
+    color: #d4b8b0;
+}
+
+/* Información */
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.cart-item-detail {
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+/* Controles de cantidad */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-qty-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-qty-btn:hover {
+    background: var(--accent);
+    color: var(--white);
+    border-color: var(--accent);
+}
+
+.cart-item-quantity span {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 25px;
+    text-align: center;
+}
+
+/* ========== BOTÓN ELIMINAR MEJORADO ========== */
+.cart-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    color: #b28b8b;
+    font-size: 16px;
+    margin-top: 20px;
+    flex-shrink: 0;
+}
+
+.cart-remove:hover {
+    background: #fee2e2;
+    color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.cart-remove:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.cart-footer {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border);
+    background: var(--white);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-total span:first-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.cart-total span:last-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 14px;
+    background: var(--text-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-checkout:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .cart-item-img {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .cart-item-img i {
+        font-size: 28px;
+    }
+    
+    .cart-qty-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+    
+    .cart-remove {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}

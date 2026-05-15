@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz Denim | Tienda de Ropa para Mujer - Gamarra</title>
+    <meta name="description" content="Pariz Denim - Tienda de ropa para mujer en Gamarra, La Victoria. Jeans, blusas, tops, chalecos y más. Moda peruana de calidad.">
+    <meta name="keywords" content="pariz denim, ropa mujer, gamarra, jeans, blusas, moda peruana, tienda ropa, la victoria">
+    <meta name="author" content="Pariz Denim">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/JPG" href="imagen/Logo_Principal.JPG">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagen/Logo_Principal.JPG" alt="Pariz Denim" class="logo-img" onerror="this.src='https://placehold.co/60x60/f0f0f0/ccc?text=P'">
+                <div class="logo-text">
+                    <h1>PARIZ</h1>
+                    <p>DENIM</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar...">
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-text">
+            <span class="hero-badge">COLECCIÓN OTOÑO 2024</span>
+            <h1 class="hero-title">Elegancia que <span class="hero-highlight">trasciende</span></h1>
+            <p class="hero-description">Descubre nuestra nueva colección. Prendas diseñadas para la mujer moderna que busca estilo, comodidad y distinción.</p>
+            <div class="hero-buttons">
+                <a href="productos.html" class="btn-hero btn-hero-primary">Explorar</a>
+                <a href="contacto.html" class="btn-hero btn-hero-outline">Contacto</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="imagen/imagenprincipal.JPG" alt="Pariz Denim Modelo" onerror="this.src='https://placehold.co/500x500/faf0ea/d48c8c?text=Pariz+Denim'">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <div class="section-header">
+            <h2>Diseño y <span>calidad</span></h2>
+            <p>Lo que nos hace diferentes</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-truck"></i>
+                <h3>Envío Express</h3>
+                <p>Entregas en 24h</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Cambios sin costo</h3>
+                <p>30 días</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Pago seguro</h3>
+                <p>Múltiples métodos</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gem"></i>
+                <h3>Calidad premium</h3>
+                <p>Materiales únicos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Lo que dicen <span>nuestras clientas</span></h2>
+            <p>Opiniones reales de mujeres que confían en Pariz Denim</p>
+        </div>
+        
+        <!-- Grid de testimonios (se llena con JavaScript) -->
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+
+        <!-- Botones Ver más / Ver menos -->
+        <div class="testimonial-actions">
+            <button class="btn-more-testimonials" id="btnMoreTestimonials">Ver más opiniones <i class="fas fa-chevron-down"></i></button>
+            <button class="btn-less-testimonials" id="btnLessTestimonials" style="display: none;">Ver menos <i class="fas fa-chevron-up"></i></button>
+        </div>
+
+        <!-- FORMULARIO MODERNO -->
+        <div class="add-review-section">
+            <div class="add-review-container">
+                <div class="review-header">
+                    <div class="review-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Comparte tu experiencia</h3>
+                    <p>Tu opinión nos ayuda a mejorar y a otras clientas a elegir mejor</p>
+                </div>
+                
+                <form id="reviewFormModern" class="review-form-modern">
+                    <div class="row-2-modern">
+                        <div class="input-group-modern">
+                            <label>Tu nombre</label>
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="reviewNameModern" placeholder="Ej: María" required>
+                            </div>
+                        </div>
+                        <div class="input-group-modern">
+                            <label>Tu apellido</label>
+                            <div class="input-icon">
+                                <i class="fas fa-user-tag"></i>
+                                <input type="text" id="reviewLastNameModern" placeholder="Ej: González" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group-modern">
+                        <label>Tu comentario</label>
+                        <div class="input-icon">
+                            <i class="fas fa-comment-dots"></i>
+                            <textarea id="reviewCommentModern" rows="3" placeholder="Cuéntanos tu experiencia con nuestros productos..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-modern">
+                        <label>⭐ ¿Cómo calificas tu experiencia?</label>
+                        <div class="stars-rating-modern" id="starsRatingModern">
+                            <i class="far fa-star" data-value="1"></i>
+                            <i class="far fa-star" data-value="2"></i>
+                            <i class="far fa-star" data-value="3"></i>
+                            <i class="far fa-star" data-value="4"></i>
+                            <i class="far fa-star" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="reviewRatingModern" value="0">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit-modern">
+                        <i class="fas fa-paper-plane"></i> Publicar comentario
+                    </button>
+                    
+                    <div class="success-message" id="successMessage">
+                        <i class="fas fa-check-circle"></i>
+                        <span>¡Gracias por tu comentario! Ha sido publicado exitosamente.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pariz <span>Denim</span></h3>
+                <p>Moda de calidad desde Gamarra. Más de 10 años vistiendo a mujeres con estilo.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Horario</h4>
+                <p>Lun a Sáb: 9am - 8pm</p>
+                <p>Dom: 10am - 4pm</p>
+                <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fas fa-envelope"></i> ventas@parizdenim.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Ubicación</h4>
+                <p>Jr. Sebastián Barranca 1575</p>
+                <p>Galería El Rey, Local 45-B</p>
+                <p>Gamarra, La Victoria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Pariz Denim — Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3><i class="fas fa-shopping-bag"></i> Carrito</h3>
+        <button class="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart"><i class="fas fa-shopping-cart"></i><p>Tu carrito está vacío</p></div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
+        <button class="btn-checkout" id="checkoutBtn">Finalizar compra</button>
+    </div>
+</div>
+
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Finalizar pedido</h3>
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <form id="checkoutForm">
+            <div class="form-row">
+                <div class="form-group"><label>Nombre</label><input type="text" id="nombre" required></div>
+                <div class="form-group"><label>Apellido</label><input type="text" id="apellido" required></div>
+            </div>
+            <div class="form-group"><label>Email</label><input type="email" id="email" required></div>
+            <div class="form-row">
+                <div class="form-group"><label>Teléfono</label><input type="tel" id="telefono" required></div>
+                <div class="form-group"><label>Método de pago</label>
+                    <select id="metodoPago" required>
+                        <option value="">Seleccionar</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="yape">Yape</option>
+                        <option value="plin">Plin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label>Dirección</label><textarea id="direccion" rows="2" required></textarea></div>
+            <button type="submit" class="btn-submit-order">Confirmar</button>
+        </form>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

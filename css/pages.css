@@ -1,0 +1,431 @@
+/* ============================================
+   PARIZ DENIM - PAGES STYLES
+   Tiendas, Devoluciones, Contacto
+   ============================================ */
+
+/* ========== TIENDAS ========== */
+.stores-page {
+    padding: 60px 0;
+}
+
+.stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 40px;
+}
+
+.store-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.store-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.store-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.store-info {
+    padding: 24px;
+}
+
+.store-info h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.store-info p {
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.store-info i {
+    width: 20px;
+    color: var(--accent);
+}
+
+.store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+}
+
+.store-link:hover {
+    gap: 12px;
+    border-bottom-color: var(--accent);
+}
+
+.map-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.map-container h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.map-container iframe {
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ========== DEVOLUCIONES ========== */
+.returns-page {
+    padding: 60px 0;
+}
+
+.returns-content {
+    display: flex;
+    gap: 56px;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 48px;
+    box-shadow: var(--shadow-sm);
+}
+
+.returns-img {
+    width: 160px;
+    height: auto;
+}
+
+.returns-text {
+    flex: 1;
+}
+
+.returns-text h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+}
+
+.returns-text h2 span {
+    color: var(--accent);
+}
+
+.returns-text > p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.returns-section {
+    margin: 28px 0;
+    padding: 0;
+}
+
+.returns-section h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+}
+
+.returns-section h3 i {
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.returns-section ul,
+.returns-section ol {
+    padding-left: 28px;
+}
+
+.returns-section li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.returns-note {
+    background: var(--bg-light);
+    padding: 24px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.returns-note i {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.returns-note p {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+/* ========== CONTACTO - NUEVA VERSIÓN ========== */
+.contact-page {
+    padding: 60px 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* Tarjeta de información */
+.contact-info-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.contact-info-card h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: -0.3px;
+}
+
+.contact-info-card h2 span {
+    color: var(--accent);
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 35px;
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.contact-icon i {
+    font-size: 20px;
+    color: var(--accent);
+}
+
+.contact-info-item:hover .contact-icon {
+    background: var(--accent);
+}
+
+.contact-info-item:hover .contact-icon i {
+    color: var(--white);
+}
+
+.contact-detail h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.contact-detail p {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+
+/* Redes Sociales */
+.contact-social {
+    margin-top: 20px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.contact-social h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 18px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: var(--accent);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Tarjeta del formulario */
+.contact-form-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.contact-form-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.contact-form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.contact-form-image img:hover {
+    transform: scale(1.02);
+}
+
+.contact-form-content {
+    padding: 30px;
+}
+
+.contact-form-content h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    letter-spacing: -0.3px;
+}
+
+.contact-form-content h2 span {
+    color: var(--accent);
+}
+
+.form-row-custom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.btn-submit-contact {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.btn-submit-contact:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* Responsive contacto */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-info-card {
+        padding: 25px;
+    }
+    
+    .contact-form-content {
+        padding: 20px;
+    }
+    
+    .form-row-custom {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .contact-info-item {
+        gap: 12px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-icon i {
+        font-size: 16px;
+    }
+}

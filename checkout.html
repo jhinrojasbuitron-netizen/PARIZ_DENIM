@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz Denim | Finalizar Pedido</title>
+    <meta name="description" content="Finaliza tu pedido en Pariz Denim. Pago seguro con múltiples métodos.">
+    <meta name="keywords" content="pariz denim, checkout, finalizar pedido, pago seguro">
+    <meta name="author" content="Pariz Denim">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/JPG" href="imagen/Logo_Principal.JPG">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagen/Logo_Principal.JPG" alt="Pariz Denim" class="logo-img" onerror="this.src='https://placehold.co/60x60/f0f0f0/ccc?text=P'">
+                <div class="logo-text">
+                    <h1>PARIZ</h1>
+                    <p>DENIM</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="checkout-wrapper">
+    <div class="checkout-container">
+        
+        <!-- Progress Steps -->
+        <div class="checkout-steps">
+            <div class="step" data-step="1">
+                <div class="step-number">1</div>
+                <span>Carrito</span>
+            </div>
+            <div class="step active" data-step="2">
+                <div class="step-number">2</div>
+                <span>Datos</span>
+            </div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <span>Envío</span>
+            </div>
+            <div class="step" data-step="4">
+                <div class="step-number">4</div>
+                <span>Pago</span>
+            </div>
+        </div>
+
+        <div class="checkout-grid">
+            <div class="checkout-form">
+                <!-- STEP 1: Carrito -->
+                <div class="step-content" id="step1">
+                    <div class="form-section">
+                        <h3><i class="fas fa-shopping-cart"></i> Tu carrito</h3>
+                        <div class="order-items" id="step1Items">
+                            <div style="text-align:center; padding:30px;">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                <p>Cargando productos...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn-prev" disabled style="visibility: hidden;">Anterior</button>
+                        <button class="btn-next" data-next="2">Continuar →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Datos personales -->
+                <div class="step-content active" id="step2">
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Datos personales</h3>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label>Nombre <span class="required">*</span></label>
+                                <input type="text" id="nombre" placeholder="María" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Apellido <span class="required">*</span></label>
+                                <input type="text" id="apellido" placeholder="González" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email <span class="required">*</span></label>
+                            <input type="email" id="email" placeholder="maria@ejemplo.com" required>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label>Teléfono <span class="required">*</span></label>
+                                <input type="tel" id="telefono" placeholder="987 654 321" required>
+                            </div>
+                            <div class="form-group">
+                                <label>DNI / RUC</label>
+                                <input type="text" id="documento" placeholder="Opcional">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn-prev" data-prev="1">← Anterior</button>
+                        <button class="btn-next" data-next="3">Continuar →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Envío -->
+                <div class="step-content" id="step3">
+                    <div class="form-section">
+                        <h3><i class="fas fa-truck"></i> Tipo de entrega</h3>
+                        <div class="delivery-options" id="deliveryOptions">
+                            <div class="delivery-option selected" data-delivery="delivery">
+                                <div class="delivery-radio">
+                                    <input type="radio" name="deliveryType" id="deliveryHome" value="delivery" checked>
+                                    <label for="deliveryHome">🚚 Envío a domicilio</label>
+                                </div>
+                                <div class="delivery-cost">
+                                    <span class="cost-value">S/ 30.00</span>
+                                    <span class="cost-note">(Entrega en 24-48 horas)</span>
+                                </div>
+                                <div class="delivery-details" id="deliveryDetails">
+                                    <div class="form-group">
+                                        <label>Dirección <span class="required">*</span></label>
+                                        <input type="text" id="direccion" placeholder="Calle, número, urbanización" required>
+                                    </div>
+                                    <div class="form-row-2">
+                                        <div class="form-group">
+                                            <label>Distrito <span class="required">*</span></label>
+                                            <input type="text" id="distrito" placeholder="La Victoria" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Ciudad</label>
+                                            <input type="text" id="ciudad" value="Lima" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Referencia</label>
+                                        <textarea id="referencia" rows="2" placeholder="Referencia (opcional)"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-option" data-delivery="pickup">
+                                <div class="delivery-radio">
+                                    <input type="radio" name="deliveryType" id="storePickup" value="pickup">
+                                    <label for="storePickup">🏬 Recojo en tienda</label>
+                                </div>
+                                <div class="delivery-cost">
+                                    <span class="cost-value">S/ 0.00</span>
+                                    <span class="cost-note">(Sin costo de envío)</span>
+                                </div>
+                                <div class="delivery-details" id="pickupDetails" style="display: none;">
+                                    <div class="form-group">
+                                        <label>Selecciona tu tienda <span class="required">*</span></label>
+                                        <select id="tienda">
+                                            <option value="">Seleccionar tienda</option>
+                                            <option value="Tienda Principal - La Victoria (Jr. Sebastián Barranca 1575)">🏬 Tienda Principal - La Victoria</option>
+                                            <option value="Sucursal La Victoria (Agustín Gamarra 906)">🏬 Sucursal La Victoria</option>
+                                            <option value="Sucursal Lince (Av. Arequipa 2250)">🏬 Sucursal Lince</option>
+                                        </select>
+                                    </div>
+                                    <div class="payment-note" style="margin-top: 12px;">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Horario: Lun-Sáb 9am-8pm, Dom 10am-4pm</span>
+                                    </div>
+                                    <div class="payment-note" style="margin-top: 8px;">
+                                        <i class="fas fa-id-card"></i>
+                                        <span>Presenta tu DNI y número de pedido</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn-prev" data-prev="2">← Anterior</button>
+                        <button class="btn-next" data-next="4">Continuar →</button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Pago -->
+                <div class="step-content" id="step4">
+                    <div class="form-section">
+                        <h3><i class="fas fa-credit-card"></i> Método de pago</h3>
+                        <div class="payment-methods" id="paymentMethods">
+                            <!-- Tarjeta -->
+                            <div class="payment-card" data-payment="tarjeta">
+                                <div class="payment-header">
+                                    <input type="radio" name="payment" id="paymentTarjeta" value="tarjeta">
+                                    <label for="paymentTarjeta">Tarjeta de crédito/débito</label>
+                                    <div class="payment-icons">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                                <div class="payment-content">
+                                    <div class="form-group">
+                                        <label>Número de tarjeta</label>
+                                        <div class="card-input-wrapper">
+                                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                                            <i class="far fa-credit-card"></i>
+                                        </div>
+                                    </div>
+                                    <div class="card-row">
+                                        <div class="form-group">
+                                            <label>Fecha expiración</label>
+                                            <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>CVV</label>
+                                            <input type="text" id="cardCvv" placeholder="123" maxlength="4">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nombre del titular</label>
+                                        <input type="text" id="cardHolder" placeholder="Como aparece en la tarjeta">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Número de cuotas</label>
+                                        <select id="cuotas">
+                                            <option value="1">1 cuota sin intereses</option>
+                                            <option value="3">3 cuotas sin intereses</option>
+                                            <option value="6">6 cuotas sin intereses</option>
+                                            <option value="12">12 cuotas con intereses</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Yape -->
+                            <div class="payment-card" data-payment="yape">
+                                <div class="payment-header">
+                                    <input type="radio" name="payment" id="paymentYape" value="yape">
+                                    <label for="paymentYape">Yape</label>
+                                    <div class="payment-icons">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span class="payment-badge">Rápido y seguro</span>
+                                    </div>
+                                </div>
+                                <div class="payment-content">
+                                    <p class="payment-note" style="margin-bottom: 15px;">Para finalizar la compra, ingresa tu celular y el código de aprobación.</p>
+                                    <div class="form-row-2">
+                                        <div class="form-group">
+                                            <label>Celular</label>
+                                            <div class="phone-input">
+                                                <span class="phone-code">+51</span>
+                                                <input type="tel" id="yapePhone" placeholder="9 8765 4321">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Código de aprobación</label>
+                                            <div class="code-input">
+                                                <input type="text" id="yapeCode" placeholder="6 dígitos" maxlength="6">
+                                                <button type="button" id="sendYapeCode" class="btn-send-code">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>El código es válido por 2 minutos</span>
+                                    </div>
+                                    <div class="bank-info">
+                                        <div class="bank-detail"><span class="bank-label">🏢 Empresa:</span> Pariz Denim EIRL</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Plin -->
+                            <div class="payment-card" data-payment="plin">
+                                <div class="payment-header">
+                                    <input type="radio" name="payment" id="paymentPlin" value="plin">
+                                    <label for="paymentPlin">Plin</label>
+                                    <div class="payment-icons">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span class="payment-badge">BCP, BBVA, Interbank</span>
+                                    </div>
+                                </div>
+                                <div class="payment-content">
+                                    <p class="payment-note" style="margin-bottom: 15px;">Para finalizar la compra, ingresa tu celular y el código de aprobación.</p>
+                                    <div class="form-row-2">
+                                        <div class="form-group">
+                                            <label>Celular</label>
+                                            <div class="phone-input">
+                                                <span class="phone-code">+51</span>
+                                                <input type="tel" id="plinPhone" placeholder="9 8765 4321">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Código de aprobación</label>
+                                            <div class="code-input">
+                                                <input type="text" id="plinCode" placeholder="6 dígitos" maxlength="6">
+                                                <button type="button" id="sendPlinCode" class="btn-send-code">Enviar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>El código es válido por 2 minutos</span>
+                                    </div>
+                                    <div class="bank-info">
+                                        <div class="bank-detail"><span class="bank-label">🏢 Empresa:</span> Pariz Denim EIRL</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Efectivo -->
+                            <div class="payment-card" data-payment="efectivo">
+                                <div class="payment-header">
+                                    <input type="radio" name="payment" id="paymentEfectivo" value="efectivo">
+                                    <label for="paymentEfectivo">Efectivo</label>
+                                    <div class="payment-icons">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <span class="payment-badge">Pago al recibir</span>
+                                    </div>
+                                </div>
+                                <div class="payment-content">
+                                    <div class="cash-info">
+                                        <div class="form-group">
+                                            <label>¿Con cuánto pagarás?</label>
+                                            <div class="cash-input-group">
+                                                <span class="currency">S/</span>
+                                                <input type="number" id="cashAmount" placeholder="0.00" step="10" min="0">
+                                            </div>
+                                            <div class="change-info" id="changeInfo" style="display: none;">
+                                                <i class="fas fa-calculator"></i>
+                                                <span>Vuelto: <strong id="changeAmount">S/ 0.00</strong></span>
+                                            </div>
+                                        </div>
+                                        <div class="cash-warning">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                            <span>Aceptamos billetes de S/10, S/20, S/50, S/100. El repartidor llevará cambio limitado.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons">
+                        <button class="btn-prev" data-prev="3">← Anterior</button>
+                        <button class="btn-next btn-confirm-order" id="confirmOrderBtn" style="background: #2e7d32;">Confirmar pedido ✓</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen del pedido (siempre visible) -->
+            <div class="order-summary">
+                <h3><i class="fas fa-shopping-bag"></i> Resumen del pedido</h3>
+                <div class="order-items" id="orderItems">
+                    <div style="text-align:center; padding:30px;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Cargando...</p>
+                    </div>
+                </div>
+                <div class="cost-summary">
+                    <div class="cost-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">S/ 0.00</span>
+                    </div>
+                    <div class="cost-row" id="shippingRow">
+                        <span>Envío</span>
+                        <span id="shippingCost">S/ 30.00</span>
+                    </div>
+                    <div class="cost-row total">
+                        <span>Total</span>
+                        <span id="total">S/ 0.00</span>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <p><i class="fas fa-shield-alt"></i> Compra 100% segura</p>
+                    <p><i class="fas fa-undo-alt"></i> Cambios gratis hasta 30 días</p>
+                    <p><i class="fas fa-headset"></i> Atención al cliente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de éxito -->
+<div class="success-modal" id="successModal">
+    <div class="success-content">
+        <i class="fas fa-check-circle"></i>
+        <h2>¡Pedido confirmado!</h2>
+        <p>Hemos recibido tu pedido correctamente.</p>
+        <div class="order-code">
+            <strong id="orderCode">#PARIZ-000000</strong>
+        </div>
+        <div id="successDetails" style="margin: 15px 0; text-align: left; font-size: 13px;"></div>
+        <button class="btn-continue" onclick="window.location.href='productos.html'">Seguir comprando</button>
+    </div>
+</div>
+
+<script>
+    // ========== CARGAR CARRITO ==========
+    let cart = [];
+
+    function cargarCarrito() {
+        const guardado = localStorage.getItem('pariz_carrito');
+        if (guardado) {
+            cart = JSON.parse(guardado);
+        }
+        actualizarResumen();
+        actualizarStep1();
+        actualizarContadorCarrito();
+    }
+
+    function actualizarContadorCarrito() {
+        const cartCount = document.getElementById('cartCount');
+        if (cartCount) {
+            const totalItems = cart.reduce((sum, item) => sum + item.cantidad, 0);
+            cartCount.textContent = totalItems;
+        }
+    }
+
+    function actualizarStep1() {
+        const step1Items = document.getElementById('step1Items');
+        if (!step1Items) return;
+        
+        if (cart.length === 0) {
+            step1Items.innerHTML = '<div style="text-align:center; padding:30px;"><i class="fas fa-shopping-cart"></i><p>No hay productos</p><a href="productos.html" style="display:inline-block; margin-top:15px; padding:10px 20px; background:#d4a373; color:white; border-radius:30px; text-decoration:none;">Ir a comprar</a></div>';
+            return;
+        }
+        
+        let html = '';
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+            html += `
+                <div class="order-item">
+                    <div class="order-item-img"><i class="fas fa-tshirt"></i></div>
+                    <div class="order-item-info">
+                        <h4>${item.nombre}</h4>
+                        <p>Talla: ${item.talla} | Color: ${item.color}</p>
+                        <p>Cantidad: ${item.cantidad}</p>
+                    </div>
+                    <div class="order-item-price">S/ ${(item.precio * item.cantidad).toFixed(2)}</div>
+                </div>
+            `;
+        }
+        step1Items.innerHTML = html;
+    }
+
+    function actualizarResumen() {
+        const orderItemsDiv = document.getElementById('orderItems');
+        
+        if (cart.length === 0) {
+            orderItemsDiv.innerHTML = '<div style="text-align:center; padding:30px;"><i class="fas fa-shopping-cart"></i><p>No hay productos</p></div>';
+            document.getElementById('subtotal').textContent = 'S/ 0.00';
+            document.getElementById('total').textContent = 'S/ 0.00';
+            return;
+        }
+        
+        let html = '';
+        let subtotal = 0;
+        
+        for (let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+            subtotal += item.precio * item.cantidad;
+            html += `
+                <div class="order-item">
+                    <div class="order-item-img">${item.imagen ? `<img src="${item.imagen}" alt="${item.nombre}" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" onerror="this.innerHTML='<i class=\'fas fa-tshirt\'></i>'">` : '<i class="fas fa-tshirt"></i>'}</div>
+                    <div class="order-item-info">
+                        <h4>${item.nombre}</h4>
+                        <p>Talla: ${item.talla} | Color: ${item.color}</p>
+                        <p>Cantidad: ${item.cantidad}</p>
+                    </div>
+                    <div class="order-item-price">S/ ${(item.precio * item.cantidad).toFixed(2)}</div>
+                </div>
+            `;
+        }
+        
+        orderItemsDiv.innerHTML = html;
+        
+        const deliveryRadio = document.querySelector('input[name="deliveryType"]:checked');
+        const envio = (deliveryRadio && deliveryRadio.value === 'delivery') ? 30 : 0;
+        const total = subtotal + envio;
+        
+        document.getElementById('subtotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+        document.getElementById('shippingCost').innerHTML = envio === 0 ? 'S/ 0.00' : `S/ ${envio.toFixed(2)}`;
+        document.getElementById('total').textContent = `S/ ${total.toFixed(2)}`;
+        
+        // Actualizar vuelto si estamos en paso 4
+        if (document.getElementById('step4').classList.contains('active')) {
+            setTimeout(calcularVuelto, 100);
+        }
+    }
+
+    // ========== NAVEGACIÓN ==========
+    let currentStep = 2;
+
+    function mostrarStep(step) {
+        document.querySelectorAll('.step-content').forEach(el => el.classList.remove('active'));
+        document.getElementById(`step${step}`).classList.add('active');
+        
+        document.querySelectorAll('.step').forEach(el => {
+            const stepNum = parseInt(el.dataset.step);
+            el.classList.remove('active', 'completed');
+            if (stepNum < step) el.classList.add('completed');
+            else if (stepNum === step) el.classList.add('active');
+        });
+        
+        currentStep = step;
+        if (step === 3 || step === 4) actualizarResumen();
+    }
+
+    // Event listeners navegación
+    document.querySelectorAll('.btn-next').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const nextStep = parseInt(btn.dataset.next);
+            if (nextStep) {
+                if (currentStep === 2) {
+                    const nombre = document.getElementById('nombre')?.value.trim();
+                    const apellido = document.getElementById('apellido')?.value.trim();
+                    const email = document.getElementById('email')?.value.trim();
+                    const telefono = document.getElementById('telefono')?.value.trim();
+                    if (!nombre || !apellido || !email || !telefono) {
+                        alert('Por favor completa todos los datos personales');
+                        return;
+                    }
+                }
+                if (currentStep === 3 && nextStep === 4) {
+                    const deliveryType = document.querySelector('input[name="deliveryType"]:checked')?.value;
+                    if (deliveryType === 'delivery') {
+                        const direccion = document.getElementById('direccion')?.value.trim();
+                        const distrito = document.getElementById('distrito')?.value.trim();
+                        if (!direccion || !distrito) {
+                            alert('Por favor completa la dirección de envío');
+                            return;
+                        }
+                    } else {
+                        const tienda = document.getElementById('tienda')?.value;
+                        if (!tienda) {
+                            alert('Por favor selecciona una tienda');
+                            return;
+                        }
+                    }
+                }
+                mostrarStep(nextStep);
+            }
+        });
+    });
+    
+    document.querySelectorAll('.btn-prev').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const prevStep = parseInt(btn.dataset.prev);
+            if (prevStep) mostrarStep(prevStep);
+        });
+    });
+
+    // ========== TIPO DE ENTREGA ==========
+    function initDelivery() {
+        const options = document.querySelectorAll('.delivery-option');
+        const deliveryDetails = document.getElementById('deliveryDetails');
+        const pickupDetails = document.getElementById('pickupDetails');
+        
+        options.forEach(opt => {
+            opt.addEventListener('click', function() {
+                options.forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                const radio = this.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+                
+                if (radio.value === 'delivery') {
+                    deliveryDetails.style.display = 'block';
+                    pickupDetails.style.display = 'none';
+                } else {
+                    deliveryDetails.style.display = 'none';
+                    pickupDetails.style.display = 'block';
+                }
+                actualizarResumen();
+            });
+        });
+        
+        document.querySelectorAll('input[name="deliveryType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.checked) {
+                    const parent = this.closest('.delivery-option');
+                    options.forEach(o => o.classList.remove('selected'));
+                    parent.classList.add('selected');
+                    actualizarResumen();
+                }
+            });
+        });
+    }
+
+    // ========== MÉTODOS DE PAGO ==========
+    function initPaymentMethods() {
+        const cards = document.querySelectorAll('.payment-card');
+        cards.forEach(card => {
+            const radio = card.querySelector('input[type="radio"]');
+            const header = card.querySelector('.payment-header');
+            header.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                if (radio) radio.checked = true;
+            });
+            if (radio) {
+                radio.addEventListener('change', function() {
+                    if (this.checked) {
+                        cards.forEach(c => c.classList.remove('selected'));
+                        card.classList.add('selected');
+                    }
+                });
+            }
+        });
+    }
+
+    // ========== FORMATO TARJETA ==========
+    const cardNumber = document.getElementById('cardNumber');
+    if (cardNumber) {
+        cardNumber.addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            let formatted = '';
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) formatted += ' ';
+                formatted += value[i];
+            }
+            this.value = formatted.slice(0, 19);
+        });
+    }
+    
+    const cardExpiry = document.getElementById('cardExpiry');
+    if (cardExpiry) {
+        cardExpiry.addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length >= 2) this.value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            else this.value = value;
+        });
+    }
+    
+    const cardCvv = document.getElementById('cardCvv');
+    if (cardCvv) {
+        cardCvv.addEventListener('input', function(e) {
+            this.value = this.value.replace(/\D/g, '').slice(0, 4);
+        });
+    }
+
+    // ========== CÓDIGOS ==========
+    document.getElementById('sendYapeCode')?.addEventListener('click', function() {
+        const phone = document.getElementById('yapePhone')?.value;
+        if (!phone || phone.length < 9) {
+            alert('Ingresa un número de celular válido');
+            return;
+        }
+        alert(`✅ Código enviado al número +51 ${phone}`);
+    });
+    
+    document.getElementById('sendPlinCode')?.addEventListener('click', function() {
+        const phone = document.getElementById('plinPhone')?.value;
+        if (!phone || phone.length < 9) {
+            alert('Ingresa un número de celular válido');
+            return;
+        }
+        alert(`✅ Código enviado al número +51 ${phone}`);
+    });
+
+    // ========== VUELTO ==========
+    const cashAmount = document.getElementById('cashAmount');
+    const changeInfo = document.getElementById('changeInfo');
+    const changeAmount = document.getElementById('changeAmount');
+    
+    function calcularVuelto() {
+        const totalSpan = document.getElementById('total');
+        let total = parseFloat(totalSpan.textContent.replace('S/ ', ''));
+        const monto = parseFloat(cashAmount?.value) || 0;
+        
+        if (monto > 0 && changeInfo) {
+            if (monto >= total) {
+                changeAmount.textContent = `S/ ${(monto - total).toFixed(2)}`;
+                changeInfo.style.display = 'flex';
+                changeInfo.style.background = '#e8f5e9';
+            } else {
+                changeAmount.textContent = `Faltan S/ ${(total - monto).toFixed(2)}`;
+                changeInfo.style.display = 'flex';
+                changeInfo.style.background = '#fff3cd';
+            }
+        } else if (changeInfo) {
+            changeInfo.style.display = 'none';
+        }
+    }
+    
+    if (cashAmount) cashAmount.addEventListener('input', calcularVuelto);
+
+    // ========== GENERAR CÓDIGO ==========
+    function generarCodigo() {
+        return 'PARIZ-' + Date.now().toString().slice(-6);
+    }
+
+    // ========== VALIDAR TARJETA ==========
+    function validarTarjeta() {
+        const number = document.getElementById('cardNumber')?.value.replace(/\s/g, '');
+        if (!number || number.length < 15) {
+            alert('Número de tarjeta inválido');
+            return false;
+        }
+        return true;
+    }
+
+    // ========== PROCESAR PEDIDO ==========
+    document.getElementById('confirmOrderBtn')?.addEventListener('click', function() {
+        if (cart.length === 0) {
+            alert('El carrito está vacío');
+            return;
+        }
+        
+        const nombre = document.getElementById('nombre')?.value.trim();
+        const apellido = document.getElementById('apellido')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const telefono = document.getElementById('telefono')?.value.trim();
+        
+        if (!nombre || !apellido || !email || !telefono) {
+            alert('Completa todos los datos personales');
+            mostrarStep(2);
+            return;
+        }
+        
+        const deliveryType = document.querySelector('input[name="deliveryType"]:checked')?.value;
+        let direccion = '';
+        let tienda = '';
+        
+        if (deliveryType === 'delivery') {
+            const dir = document.getElementById('direccion')?.value.trim();
+            const dist = document.getElementById('distrito')?.value.trim();
+            if (!dir || !dist) {
+                alert('Completa la dirección de envío');
+                mostrarStep(3);
+                return;
+            }
+            direccion = `${dir}, ${dist}`;
+        } else {
+            tienda = document.getElementById('tienda')?.value;
+            if (!tienda) {
+                alert('Selecciona una tienda');
+                mostrarStep(3);
+                return;
+            }
+        }
+        
+        const metodoPago = document.querySelector('input[name="payment"]:checked')?.value;
+        if (!metodoPago) {
+            alert('Selecciona un método de pago');
+            return;
+        }
+        
+        if (metodoPago === 'tarjeta' && !validarTarjeta()) return;
+        
+        let subtotal = cart.reduce((sum, i) => sum + (i.precio * i.cantidad), 0);
+        let envio = deliveryType === 'delivery' ? 30 : 0;
+        let total = subtotal + envio;
+        let codigo = generarCodigo();
+        
+        let mensajePago = '';
+        if (metodoPago === 'yape') {
+            const phone = document.getElementById('yapePhone')?.value;
+            const code = document.getElementById('yapeCode')?.value;
+            if (!phone || !code) {
+                alert('Completa los datos de Yape');
+                return;
+            }
+            mensajePago = `Yape - Celular: +51 ${phone} - Código: ${code}`;
+        } else if (metodoPago === 'plin') {
+            const phone = document.getElementById('plinPhone')?.value;
+            const code = document.getElementById('plinCode')?.value;
+            if (!phone || !code) {
+                alert('Completa los datos de Plin');
+                return;
+            }
+            mensajePago = `Plin - Celular: +51 ${phone} - Código: ${code}`;
+        } else if (metodoPago === 'efectivo') {
+            mensajePago = `Pago en efectivo - Total: S/ ${total.toFixed(2)} - Pagas con S/ ${parseFloat(cashAmount?.value || 0).toFixed(2)}`;
+        } else {
+            mensajePago = `Tarjeta - ${document.getElementById('cardNumber')?.value.slice(-4)}`;
+        }
+        
+        const pedido = {
+            id: Date.now(), codigo: codigo, nombre: nombre, apellido: apellido,
+            email: email, telefono: telefono, direccion: direccion, tienda: tienda,
+            tipo_entrega: deliveryType, metodo_pago: metodoPago, total: total,
+            fecha: new Date().toLocaleString(), productos: cart
+        };
+        
+        let pedidos = JSON.parse(localStorage.getItem('pariz_pedidos') || '[]');
+        pedidos.unshift(pedido);
+        localStorage.setItem('pariz_pedidos', JSON.stringify(pedidos));
+        localStorage.removeItem('pariz_carrito');
+        
+        document.getElementById('orderCode').textContent = `#${codigo}`;
+        document.getElementById('successDetails').innerHTML = `
+            <p><strong>Tipo de entrega:</strong> ${deliveryType === 'delivery' ? '🚚 Envío a domicilio' : '🏬 Recojo en tienda'}</p>
+            <p><strong>Método de pago:</strong> ${metodoPago.toUpperCase()}</p>
+            <p><strong>Total:</strong> S/ ${total.toFixed(2)}</p>
+            <p><strong>${mensajePago}</strong></p>
+        `;
+        document.getElementById('successModal').classList.add('active');
+        
+        document.getElementById('cartCount').textContent = '0';
+        cart = [];
+        actualizarResumen();
+        actualizarStep1();
+    });
+    
+    document.getElementById('successModal')?.addEventListener('click', function(e) {
+        if (e.target === this) this.classList.remove('active');
+    });
+    
+    // Observar cambios
+    const totalObserver = new MutationObserver(() => {
+        if (cashAmount) calcularVuelto();
+    });
+    const totalElement = document.getElementById('total');
+    if (totalElement) totalObserver.observe(totalElement, { childList: true, characterData: true, subtree: true });
+    
+    // ========== INICIAR ==========
+    cargarCarrito();
+    initDelivery();
+    initPaymentMethods();
+    mostrarStep(2);
+</script>
+
+</body>
+</html>

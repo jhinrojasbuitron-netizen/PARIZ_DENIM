@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz Denim | ¡Gracias por tu compra!</title>
+    <meta name="description" content="Gracias por comprar en Pariz Denim. Tu pedido ha sido registrado exitosamente.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/JPG" href="imagen/Logo_Principal.JPG">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gracias-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fef6f0 0%, #faf0ea 100%);
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        
+        .gracias-content {
+            background: white;
+            border-radius: 28px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(74,44,44,0.06);
+            border: 1px solid #f0dfda;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .gracias-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 10px 30px rgba(46,125,50,0.3);
+        }
+        
+        .gracias-icon i {
+            font-size: 45px;
+            color: white;
+        }
+        
+        .gracias-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 500;
+            color: #4a2c2c;
+            margin-bottom: 10px;
+        }
+        
+        .gracias-content .subtitulo {
+            font-size: 16px;
+            color: #b28b8b;
+            margin-bottom: 30px;
+        }
+        
+        .pedido-box {
+            background: #f9f5f0;
+            border-radius: 18px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .pedido-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #4a2c2c;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .pedido-codigo {
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: #4a2c2c;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border: 2px dashed #e0d5cc;
+        }
+        
+        .pedido-detalle {
+            font-size: 14px;
+            color: #4a2c2a;
+            line-height: 2;
+        }
+        
+        .pedido-detalle strong {
+            color: #4a2c2c;
+            margin-right: 8px;
+        }
+        
+        .gracias-botones {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .btn-gracias {
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-gracias-primary {
+            background: #4a2c2c;
+            color: white;
+        }
+        
+        .btn-gracias-primary:hover {
+            background: #e8a598;
+            transform: translateY(-2px);
+        }
+        
+        .btn-gracias-outline {
+            background: white;
+            color: #4a2c2c;
+            border: 1.5px solid #e8ddd2;
+        }
+        
+        .btn-gracias-outline:hover {
+            border-color: #e8a598;
+            color: #e8a598;
+        }
+        
+        .gracias-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f0dfda;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .gracias-info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: #b28b8b;
+        }
+        
+        .gracias-info-item i {
+            color: #e8a598;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 576px) {
+            .gracias-content {
+                padding: 30px 20px;
+            }
+            
+            .gracias-content h1 {
+                font-size: 24px;
+            }
+            
+            .pedido-codigo {
+                font-size: 18px;
+            }
+            
+            .gracias-info {
+                flex-direction: column;
+                gap: 12px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagen/Logo_Principal.JPG" alt="Pariz Denim" class="logo-img" onerror="this.src='https://placehold.co/60x60/f0f0f0/ccc?text=P'">
+                <div class="logo-text">
+                    <h1>PARIZ</h1>
+                    <p>DENIM</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="gracias-page">
+    <div class="gracias-content">
+        <div class="gracias-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1>¡Gracias por tu compra!</h1>
+        <p class="subtitulo">Tu pedido ha sido registrado exitosamente</p>
+        
+        <div class="pedido-box">
+            <h3>📋 Detalles del pedido</h3>
+            <div class="pedido-codigo" id="pedidoCodigo">#PARIZ-000000</div>
+            <div class="pedido-detalle" id="pedidoDetalle">
+                <p><strong>Estado:</strong> Pendiente</p>
+                <p><strong>Método de pago:</strong> -</p>
+                <p><strong>Total:</strong> S/ 0.00</p>
+                <p><strong>Fecha:</strong> -</p>
+            </div>
+        </div>
+        
+        <div class="gracias-botones">
+            <a href="productos.html" class="btn-gracias btn-gracias-primary">
+                <i class="fas fa-shopping-bag"></i> Seguir comprando
+            </a>
+            <a href="index.html" class="btn-gracias btn-gracias-outline">
+                <i class="fas fa-home"></i> Ir al inicio
+            </a>
+        </div>
+        
+        <div class="gracias-info">
+            <div class="gracias-info-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Compra segura</span>
+            </div>
+            <div class="gracias-info-item">
+                <i class="fas fa-undo-alt"></i>
+                <span>Cambios 30 días</span>
+            </div>
+            <div class="gracias-info-item">
+                <i class="fas fa-headset"></i>
+                <span>Atención al cliente</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pariz <span>Denim</span></h3>
+                <p>Moda de calidad desde Gamarra.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fas fa-envelope"></i> ventas@parizdenim.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Pariz Denim</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Cargar datos del último pedido
+    const pedidos = JSON.parse(localStorage.getItem('pariz_pedidos') || '[]');
+    const ultimoPedido = pedidos.length > 0 ? pedidos[0] : null;
+    
+    if (ultimoPedido) {
+        document.getElementById('pedidoCodigo').textContent = '#' + (ultimoPedido.codigo || 'PARIZ-' + ultimoPedido.id);
+        document.getElementById('pedidoDetalle').innerHTML = `
+            <p><strong>Estado:</strong> Pendiente</p>
+            <p><strong>Método de pago:</strong> ${ultimoPedido.metodo_pago?.toUpperCase() || '-'}</p>
+            <p><strong>Total:</strong> S/ ${ultimoPedido.total?.toFixed(2) || '0.00'}</p>
+            <p><strong>Fecha:</strong> ${ultimoPedido.fecha || '-'}</p>
+        `;
+    }
+    
+    // Contador del carrito
+    const guardado = localStorage.getItem('pariz_carrito');
+    if (guardado) {
+        const cart = JSON.parse(guardado);
+        const cartCount = document.getElementById('cartCount');
+        if (cartCount) {
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.cantidad, 0);
+        }
+    }
+    
+    // Menú móvil
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
+        document.querySelector('.nav-menu')?.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

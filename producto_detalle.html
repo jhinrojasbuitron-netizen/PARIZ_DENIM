@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz Denim | Detalle del Producto</title>
+    <meta name="description" content="Detalle del producto Pariz Denim.">
+    <link rel="icon" type="image/JPG" href="imagen/Logo_Principal.JPG">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detalle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagen/Logo_Principal.JPG" alt="Pariz Denim" class="logo-img" onerror="this.src='https://placehold.co/60x60/f0f0f0/ccc?text=P'">
+                <div class="logo-text"><h1>PARIZ</h1><p>DENIM</p></div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="cart-icon" id="cartIcon"><i class="fas fa-shopping-bag"></i><span class="cart-count" id="cartCount">0</span></div>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="detalle-wrapper">
+    <div class="detalle-container">
+        <div id="detailContent" class="detalle-loading">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Cargando producto...</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>Pariz <span>Denim</span></h3><p>Moda de calidad desde Gamarra.</p></div>
+            <div class="footer-section"><h4>Enlaces</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="productos.html">Productos</a></li><li><a href="tiendas.html">Tiendas</a></li></ul></div>
+            <div class="footer-section"><h4>Contacto</h4><p><i class="fas fa-phone"></i> +51 987 654 321</p><p><i class="fas fa-envelope"></i> ventas@parizdenim.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>© 2024 Pariz Denim</p></div>
+    </div>
+</footer>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h3><i class="fas fa-shopping-bag"></i> Mi Carrito</h3><button class="close-cart"><i class="fas fa-times"></i></button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><i class="fas fa-shopping-cart"></i><p>Tu carrito está vacío</p></div></div>
+    <div class="cart-footer"><div class="cart-total"><span>Total</span><span id="cartTotal">S/ 0.00</span></div><button class="btn-checkout" id="checkoutBtn">Finalizar compra</button></div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
+<script src="js/detalle.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pariz Denim | Política de Devoluciones</title>
+    <meta name="description" content="Política de cambios y devoluciones de Pariz Denim. 30 días para cambios sin costo.">
+    <meta name="keywords" content="pariz denim, devoluciones, cambios, política, gamarra">
+    <meta name="author" content="Pariz Denim">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/JPG" href="imagen/Logo_Principal.JPG">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos para devoluciones */
+        .returns-images {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0 60px;
+            flex-wrap: wrap;
+        }
+        .return-image-card {
+            text-align: center;
+            width: 280px;
+            background: var(--white);
+            padding: 25px 20px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border);
+        }
+        .return-image-card:hover {
+            transform: translateY(-8px);
+        }
+        .return-image-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+        .return-image-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 12px 0 8px;
+            color: var(--text-primary);
+        }
+        .return-image-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .return-image-card i {
+            font-size: 24px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .returns-content {
+            display: flex;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            margin-bottom: 50px;
+        }
+        .returns-text {
+            flex: 2;
+        }
+        .returns-sidebar {
+            flex: 1;
+        }
+        .returns-section {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .returns-section:last-child {
+            border-bottom: none;
+        }
+        .returns-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .returns-section h3 i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        .returns-section p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .returns-section ul {
+            padding-left: 25px;
+        }
+        .returns-section li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        .info-box {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .info-box:hover {
+            transform: translateY(-4px);
+        }
+        .info-box i {
+            font-size: 42px;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        .info-box h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .info-box p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .info-box .btn-small {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 20px;
+            background: var(--text-primary);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        .info-box .btn-small:hover {
+            background: var(--accent);
+        }
+        .returns-note {
+            background: linear-gradient(135deg, #f8f4f0, #faf0ea);
+            padding: 25px;
+            border-radius: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .returns-note i {
+            font-size: 45px;
+            color: var(--accent);
+        }
+        .returns-note p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        .returns-note strong {
+            color: var(--text-primary);
+        }
+        .steps-section {
+            margin-top: 50px;
+        }
+        .steps-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .steps-title h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .steps-title span {
+            color: var(--accent);
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+        .step-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .step-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 992px) {
+            .returns-content {
+                flex-direction: column;
+            }
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .return-image-card {
+                width: 240px;
+            }
+            .return-image-card img {
+                height: 190px;
+            }
+        }
+        @media (max-width: 768px) {
+            .returns-images {
+                gap: 20px;
+            }
+            .return-image-card {
+                width: 100%;
+                max-width: 260px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .returns-note {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://wa.me/51987654321" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="imagen/Logo_Principal.JPG" alt="Pariz Denim" class="logo-img" onerror="this.src='https://placehold.co/60x60/f0f0f0/ccc?text=P'">
+                <div class="logo-text">
+                    <h1>PARIZ</h1>
+                    <p>DENIM</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html" class="active">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="page-title">
+    <div class="container">
+        <h1>Política de <span>Devoluciones</span></h1>
+        <p>Conoce nuestros términos y condiciones</p>
+    </div>
+</section>
+
+<section class="returns-page">
+    <div class="container">
+        <!-- 3 Imágenes destacadas - MÁS GRANDES -->
+        <div class="returns-images">
+            <div class="return-image-card">
+                <img src="imagen/devolucion.JPG" alt="Cambios gratis" onerror="this.src='https://placehold.co/400x300/f0f0f0/ccc?text=Cambios+Gratis'">
+                <i class="fas fa-undo-alt"></i>
+                <h4>Cambios sin costo</h4>
+                <p>Cambia de talla o color sin ningún costo adicional en nuestras tiendas físicas.</p>
+            </div>
+            <div class="return-image-card">
+                <img src="imagen/tiendas.JPG" alt="Tiendas físicas" onerror="this.src='https://placehold.co/400x300/f0f0f0/ccc?text=Tiendas+Físicas'">
+                <i class="fas fa-store"></i>
+                <h4>2 Tiendas en Gamarra</h4>
+                <p>Encuéntranos en los mejores puntos de Gamarra para tu comodidad.</p>
+            </div>
+            <div class="return-image-card">
+                <img src="imagen/atencion.jpg" alt="Atención personalizada" onerror="this.src='https://placehold.co/400x300/f0f0f0/ccc?text=Atención+Personalizada'">
+                <i class="fas fa-headset"></i>
+                <h4>Atención personalizada</h4>
+                <p>Nuestro equipo está listo para ayudarte con tu cambio o devolución.</p>
+            </div>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="returns-content">
+            <div class="returns-text">
+                <h2>Cambios y <span>Devoluciones</span></h2>
+                <p>En Pariz Denim queremos que estés completamente satisfecha con tu compra. Por eso, ofrecemos una política de cambios y devoluciones flexible y sin complicaciones.</p>
+                
+                <div class="returns-section">
+                    <h3><i class="fas fa-calendar-alt"></i> Plazo para cambios</h3>
+                    <p>Tienes <strong>30 días calendario</strong> a partir de la fecha de compra para realizar cambios o devoluciones en cualquiera de nuestras tiendas físicas.</p>
+                </div>
+                
+                <div class="returns-section">
+                    <h3><i class="fas fa-check-circle"></i> Condiciones para cambios</h3>
+                    <ul>
+                        <li>El producto debe estar sin uso, en las mismas condiciones en que fue entregado.</li>
+                        <li>Debe conservar todas las etiquetas y empaques originales.</li>
+                        <li>Presentar el comprobante de compra (boleta o factura).</li>
+                        <li>Los productos en oferta o promoción no aplican para devolución de dinero.</li>
+                    </ul>
+                </div>
+                
+                <div class="returns-section">
+                    <h3><i class="fas fa-exchange-alt"></i> Tipos de cambios</h3>
+                    <ul>
+                        <li><strong>Cambio por talla/color:</strong> Sin costo adicional en tienda física.</li>
+                        <li><strong>Cambio por otro producto:</strong> Aplicará la diferencia de precio.</li>
+                        <li><strong>Devolución de dinero:</strong> Reembolso en 7 días hábiles.</li>
+                    </ul>
+                </div>
+                
+                <div class="returns-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Para cualquier consulta adicional, escríbenos a <strong>ventas@parizdenim.com</strong> o llámanos al <strong>+51 987 654 321</strong></p>
+                </div>
+            </div>
+            
+            <div class="returns-sidebar">
+                <div class="info-box">
+                    <i class="fas fa-store"></i>
+                    <h4>Tienda Principal</h4>
+                    <p>Jr. Sebastián Barranca 1575<br>Galería El Rey, Local 45-B</p>
+                    <a href="https://maps.app.goo.gl/s9rcuoSBgye5soKx9" class="btn-small">Ver ubicación</a>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-clock"></i>
+                    <h4>Horario de Atención</h4>
+                    <p>Lun-Sáb: 9am - 8pm<br>Dom: 10am - 4pm</p>
+                </div>
+                <div class="info-box">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <p>+51 987 654 321</p>
+                    <a href="https://wa.me/51987654321" class="btn-small">Chatear ahora</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proceso de devolución - PASOS -->
+        <div class="steps-section">
+            <div class="steps-title">
+                <h3>¿Cómo hacer tu <span>devolución?</span></h3>
+                <p>Sigue estos simples pasos</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Revisa el producto</h4>
+                    <p>Asegúrate que el producto esté sin usar y con etiquetas</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Acude a nuestra tienda</h4>
+                    <p>Visita cualquiera de nuestras 2 tiendas en Gamarra</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Presenta el comprobante</h4>
+                    <p>Muestra tu boleta o factura de compra</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4>Recibe tu cambio</h4>
+                    <p>Te ayudamos a elegir tu nueva prenda o procesamos tu reembolso</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4>Para compras online</h4>
+                    <p>Contáctanos vía WhatsApp para coordinar tu devolución</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h4>¡Listo!</h4>
+                    <p>Disfruta de tu nueva prenda o recibe tu reembolso</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pariz <span>Denim</span></h3>
+                <p>Moda de calidad desde Gamarra.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="tiendas.html">Tiendas</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+                <p><i class="fas fa-envelope"></i> ventas@parizdenim.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Pariz Denim</p>
+        </div>
+    </div>
+</footer>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3><i class="fas fa-shopping-bag"></i> Carrito</h3>
+        <button class="close-cart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="empty-cart"><i class="fas fa-shopping-cart"></i><p>Tu carrito está vacío</p></div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><span id="cartTotal">S/ 0.00</span></div>
+        <button class="btn-checkout" id="checkoutBtn">Finalizar compra</button>
+    </div>
+</div>
+
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Finalizar pedido</h3>
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+        </div>
+        <form id="checkoutForm">
+            <div class="form-row">
+                <div class="form-group"><label>Nombre</label><input type="text" id="nombre" required></div>
+                <div class="form-group"><label>Apellido</label><input type="text" id="apellido" required></div>
+            </div>
+            <div class="form-group"><label>Email</label><input type="email" id="email" required></div>
+            <div class="form-row">
+                <div class="form-group"><label>Teléfono</label><input type="tel" id="telefono" required></div>
+                <div class="form-group"><label>Método de pago</label>
+                    <select id="metodoPago" required>
+                        <option value="">Seleccionar</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="yape">Yape</option>
+                        <option value="plin">Plin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group"><label>Dirección</label><textarea id="direccion" rows="2" required></textarea></div>
+            <button type="submit" class="btn-submit-order">Confirmar</button>
+        </form>
+    </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

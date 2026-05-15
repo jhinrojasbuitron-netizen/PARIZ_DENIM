@@ -1,0 +1,320 @@
+/* ============================================
+   PARIZ DENIM - RESPONSIVE STYLES
+   Solo media queries
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-image img {
+        max-height: 350px;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .order-summary {
+        position: static;
+        order: 2;
+    }
+    
+    .checkout-form {
+        order: 1;
+    }
+    
+    .checkout-steps {
+        gap: 40px;
+    }
+    
+    .step:not(:last-child):before {
+        width: 40px;
+        left: 40px;
+    }
+    
+    .detalle-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 30px;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .returns-content {
+        flex-direction: column;
+    }
+    
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .return-image-card {
+        width: 240px;
+    }
+    
+    .return-image-card img {
+        height: 190px;
+    }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-container {
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-image img {
+        max-height: 280px;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        display: block;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .add-review-container {
+        padding: 25px;
+    }
+    
+    .row-2-modern {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .review-header h3 {
+        font-size: 22px;
+    }
+    
+    .stars-rating-modern i {
+        font-size: 26px;
+    }
+    
+    .btn-submit-modern {
+        padding: 14px;
+        font-size: 14px;
+    }
+    
+    .testimonial-card p {
+        padding-left: 0;
+    }
+    
+    .testimonial-date {
+        padding-left: 0;
+    }
+    
+    .checkout-container {
+        padding: 0 20px;
+    }
+    
+    .checkout-form {
+        padding: 25px;
+    }
+    
+    .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .code-input {
+        flex-direction: column;
+    }
+    
+    .btn-send-code {
+        width: 100%;
+    }
+    
+    .checkout-steps {
+        gap: 20px;
+    }
+    
+    .step span {
+        font-size: 10px;
+    }
+    
+    .step:not(:last-child):before {
+        display: none;
+    }
+    
+    .detalle-container {
+        padding: 0 16px;
+    }
+    
+    .detalle-card {
+        padding: 20px;
+    }
+    
+    .detalle-titulo {
+        font-size: 22px;
+    }
+    
+    .detalle-selectores {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .detalle-talla-opt {
+        width: 40px;
+        padding: 6px 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .product-img {
+        height: 280px;
+    }
+    
+    .returns-images {
+        gap: 20px;
+    }
+    
+    .return-image-card {
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .returns-note {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 576px) {
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .cart-item-img {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .cart-item-img i {
+        font-size: 28px;
+    }
+    
+    .cart-qty-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+    
+    .cart-remove {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    
+    .contact-info-card {
+        padding: 25px;
+    }
+    
+    .contact-form-content {
+        padding: 20px;
+    }
+    
+    .form-row-custom {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .contact-info-item {
+        gap: 12px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact-icon i {
+        font-size: 16px;
+    }
+}
